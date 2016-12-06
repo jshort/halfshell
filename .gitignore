@@ -27,7 +27,19 @@
 *.i*86
 *.x86_64
 *.hex
+bin
 
 # Debug files
 *.dSYM/
 *.su
+
+# Autotools stuff
+Makefile
+Makefile.in
+configure
+.deps
+.dirstamp
+config.log
+config.status
+aclocal.m4
+autom4te.cache
