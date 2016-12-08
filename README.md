@@ -1,0 +1,2 @@
+# halfshell
+Linux terminal shell
