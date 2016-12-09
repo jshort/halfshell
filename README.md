@@ -2,13 +2,13 @@
 Linux terminal shell
 
 ## Objective
-This is a project is a simple terminal shell written in ANSI C.  It's name is due to a turtle theme (TMNT).
+This is a project is a simple terminal shell written in ANSI C.  Its name is due to a turtle theme (TMNT).
 I'm not entirely sure how far I will take it but I will write up more documentation if it becomes more than
 a pet project (no pun intended).
 
 ### Features
 * Builtins: cd, pwd, echo, exit
-* Execute system commands
+* Execute system commands and set exit code in $? accordingly
 * echo last command exit status
 * Read PS1 env var for setting prompt
 
