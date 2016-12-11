@@ -3,11 +3,11 @@
 
 #define DEFAULT_PROMPT "halfshell > "
 
-void print_prompt(void)
+char *get_prompt(void)
 {
   char *PS1 = DEFAULT_PROMPT;
   /* char *PS1 = (getenv("PS1") == NULL ? DEFAULT_PROMPT : getenv("PS1")); */
-  printf("%s", PS1);
+  return PS1;
 }
 
 void print_turtle(void)
