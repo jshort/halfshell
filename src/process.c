@@ -8,19 +8,6 @@
 #include "builtins.h"
 #include "constants.h"
 
-static void print_args(char **args)
-{
-  char *arg;
-  int i = 0;
-
-  printf("Args are:\n");
-  do {
-    arg = args[i];
-    ++i;
-    printf("%s\n", arg);
-  } while(arg != NULL);
-}
-
 static void execute_command(char **args) {
   pid_t cpid, wait_pid;
   int wstatus;

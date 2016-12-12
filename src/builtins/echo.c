@@ -21,5 +21,6 @@ int builtin_echo(char **args)
     }
   }
   printf("\n");
+  errno = 0;
   return 0;
 }

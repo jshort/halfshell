@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define DEFAULT_PROMPT "halfshell > "
+#include "constants.h"
 
 char *get_prompt(void)
 {

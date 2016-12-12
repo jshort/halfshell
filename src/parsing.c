@@ -42,7 +42,6 @@ char *read_input_char(void)
   while(1) {
     cur_char = getchar();
 
-    /* printf("%c\n", cur_char); */
     if (cur_char == '\033') {
       getchar();
       switch(getchar()) {
