@@ -6,4 +6,4 @@ __top_builddir__bin_halfshell_SOURCES = main.c display.c parsing.c process.c bui
 					builtins/cd.c \
 					builtins/echo.c
 __top_builddir__bin_halfshell_CFLAGS = -Wall
-__top_builddir__bin_halfshell_LDADD = -lreadline -largp
+__top_builddir__bin_halfshell_LDADD = $(HALFSHELL_LIBS)
