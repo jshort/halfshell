@@ -42,7 +42,6 @@ static const struct argp_option options[] = {
   {0}
 };
 
-
 static error_t parse_opt (int key, char *arg, struct argp_state *state)
 {
   /* Get the input argument from argp_parse, which we
@@ -75,6 +74,24 @@ static error_t parse_opt (int key, char *arg, struct argp_state *state)
 }
 /* ################################################################################ */
 
+static void interactive_run(void)
+{
+  int should_exit = 0;
+  char *prompt, *command, **input_args;
+
+  print_turtle();
+
+  do {
+    prompt = get_prompt();
+    command = read_input(prompt);
+    input_args = tokenize_input(command);
+    should_exit = halfshell_process(input_args);
+
+    free(command);
+    free(input_args);
+  } while (!should_exit);
+}
+
 static void noninteractive_run(ARGUMENTS arguments)
 {
   char **input_args;
@@ -98,20 +115,7 @@ static void halfshell_run(int argc, char **argv)
   if (arguments.command) noninteractive_run(arguments);
 
   /* Interactive shell */
-  int should_exit = 0;
-  char *prompt, *command, **input_args;
-
-  print_turtle();
-
-  do {
-    prompt = get_prompt();
-    command = read_input(prompt);
-    input_args = tokenize_input(command);
-    should_exit = halfshell_process(input_args);
-
-    free(command);
-    free(input_args);
-  } while (!should_exit);
+  interactive_run();
 }
 
 int main(int argc, char **argv)

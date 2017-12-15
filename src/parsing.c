@@ -10,13 +10,6 @@
 #define TOKEN_COUNT 16
 #define TOKEN_DELIMITERS " \r\n\t\v\f"
 
-void strip_newline(char *s, size_t len)
-{
-  if (s[len - 1] == '\n') {
-    s[len - 1] = '\0';
-  }
-}
-
 char *read_input(char *prompt)
 {
   char *line;
